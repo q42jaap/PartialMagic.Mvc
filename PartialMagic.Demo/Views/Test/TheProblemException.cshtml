@@ -1,0 +1,23 @@
+﻿@model PartialMagic.Demo.Models.PageModel
+@{
+  ViewBag.Title = "The Problem -> Exception";
+}
+<h2>
+  TheProblemException</h2>
+<p>
+  The partial below will throw an exception because the model in this view is of type
+  PageModel. The model in FragmentPartial.cshtml is FragmentModel. When you pass Model.MainFragment
+  into the Partial method when it's null, the Partial method uses the current fallback.
+  The following exception is thrown:
+</p>
+<pre>
+The model item passed into the dictionary is of type 'PartialMagic.Demo.Models.PageModel', but this dictionary requires a model item of type 'PartialMagic.Demo.Models.FragmentModel'.
+</pre>
+<p>
+  The only fix would be testing with an if, or passing an empty ViewDataDictionary
+  object like:<br />
+  Html.Partial("FragmentPartial", Model.MainFragment, new ViewDataDictionary())
+</p>
+<div>
+  @Html.Partial("FragmentPartial", Model.MainFragment)
+</div>

@@ -1,0 +1,32 @@
+﻿@{
+  ViewBag.Title = "The Problem";
+}
+<h1>
+  The Problem</h1>
+<p>
+  I tried explaining it here, but this question should give you a good idea of the
+  problem:</p>
+<a href="http://stackoverflow.com/questions/650393/asp-net-mvc-renderpartial-with-null-model-gets-passed-the-wrong-type">
+  http://stackoverflow.com/questions/650393/asp-net-mvc-renderpartial-with-null-model-gets-passed-the-wrong-type</a>
+(note that this question is not about razor (which I prefer), but the reason and
+exception are the same)<br />
+And an issue from June 2011 on codeplex: <a href="http://aspnet.codeplex.com/workitem/8872">
+  http://aspnet.codeplex.com/workitem/8872</a> </p>
+<p>
+  @Html.ActionLink("Or see it yourselve", "TheProblemException", "Test")
+</p>
+<p>
+  Note: when you use the PartialMagic.Mvc library, make sure you reference it in your
+  mvc application and be sure to add it to the web.config in de the Views directory
+  like so:
+  <pre>
+  &lt;system.web.webPages.razor>
+    &lt;pages>
+      &lt;namespaces>
+        ...
+        &lt;add namespace="PartialMagic.Mvc" />
+      &lt;/namespaces>
+    &lt;/pages>
+  &lt;/system.web.webPages.razor>
+</pre>
+</p>

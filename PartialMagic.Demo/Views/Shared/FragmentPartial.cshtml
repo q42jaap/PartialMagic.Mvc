@@ -1,0 +1,12 @@
+﻿@model PartialMagic.Demo.Models.FragmentModel
+@if (Model != null)
+{
+  <h2>@Model.Title</h2>
+  <p>
+    @Model.Text
+  </p>
+}
+else
+{
+  @:The fragment is null!
+}

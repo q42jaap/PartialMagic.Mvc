@@ -1,0 +1,9 @@
+﻿@model PartialMagic.Demo.Models.PageModel
+@{
+  ViewBag.Title = Model.PageTitle;
+}
+<p>
+  Calling <tt>@@Html.PartialOrDiscard("FragmentPartial", Model.MainFragment, @@&lt;article>&lt;h1>Wrapped partial call&lt;/h1>@@item&lt;/article>)</tt></p>
+<div>
+  @Html.PartialOrDiscard("FragmentPartial", Model.MainFragment, @<article><h1>Wrapped partial call</h1>@item</article>)
+</div>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>@ViewBag.Title</title>
+  <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header>
+    <h1>@ViewBag.Title</h1>
+    <nav>
+      @Html.ActionLink("TheProblem", "TheProblem", "Test") |
+      @Html.ActionLink("PartialOrNull", "PartialOrNull", "Test") |
+      @Html.ActionLink("PartialOrDiscard", "PartialOrDiscard", "Test") |
+      @Html.ActionLink("PartialOrDiscardIfEmpty", "PartialOrDiscardIfEmpty", "Test") |
+      @Html.ActionLink("PartialOrDiscard with warpper", "PartialOrDiscardWithWrapper", "Test") |
+      @Html.ActionLink("PartialOrDiscardIfEmpty with warpper", "PartialOrDiscardIfEmptyWithWrapper", "Test")
+    </nav>
+  </header>
+  <section>
+    @RenderBody()
+  </section>
+</body>
+</html>

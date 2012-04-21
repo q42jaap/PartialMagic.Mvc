@@ -1,0 +1,9 @@
+﻿@model PartialMagic.Demo.Models.PageModel
+@{
+  ViewBag.Title = Model.PageTitle;
+}
+<p>
+  Calling <tt>@@Html.PartialOrNull("FragmentPartial", Model.MainFragment)</tt></p>
+<div>
+  @Html.PartialOrNull("FragmentPartial", Model.MainFragment)
+</div>

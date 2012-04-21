@@ -1,0 +1,15 @@
+﻿@model PartialMagic.Demo.Models.PageModel
+@{
+  ViewBag.Title = Model.PageTitle;
+}
+<p>
+  Calling <tt>@@Html.PartialOrDiscardIfEmpty("FragmentListPartial", Model.OtherFragments)</tt></p>
+<div>
+  @Html.PartialOrDiscardIfEmpty("FragmentListPartial", Model.OtherFragments)
+</div>
+<p>
+  Calling <tt>@@Html.PartialOrDiscardIfEmpty("FragmentPartialFragmentListPartial", new
+    PartialMagic.Demo.Models.FragmentModel[0])</tt></p>
+<div>
+  @Html.PartialOrDiscardIfEmpty("FragmentListPartial", new PartialMagic.Demo.Models.FragmentModel[0])
+</div>

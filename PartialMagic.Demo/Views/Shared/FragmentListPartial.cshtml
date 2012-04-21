@@ -1,0 +1,25 @@
+﻿@model IEnumerable<PartialMagic.Demo.Models.FragmentModel>
+@*I'm not checking for null here because you'd probably never use PartialOrNull with an enumerable, but the choice is yours!*@
+
+<ul>
+@foreach (var fragment in Model)
+{
+  
+  @*
+  Quick demo of the PartialOrDiscard method with wrapper here.
+  Normally I would assume that an enumerable doesn't contain null's, but it doesn't hurt to check for it.
+
+  Without PartialOrDiscard you'd write:
+  @if (fragment != null)
+  {
+    <li>
+      @Html.Partial("FragmentPartial, fragment)
+    </li>
+  }
+
+  This one-liner is much easier:
+  *@
+  
+  @Html.PartialOrDiscard("FragmentPartial", fragment, @<li>@item</li>)
+}
+</ul>

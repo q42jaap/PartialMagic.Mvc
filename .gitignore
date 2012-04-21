@@ -1,0 +1,6 @@
+/PartialMagic.Demo/*.user
+/PartialMagic.Demo/bin
+/PartialMagic.Demo/obj
+/PartialMagic.Mvc/bin
+/PartialMagic.Mvc/obj
+*.suo
